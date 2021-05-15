@@ -32,9 +32,10 @@
 **/
 
 #include "stm32f10x.h"
+#include "LCD_ili9341.h"
+#include "function_LCD.h"
 #include "SysTick.h"
 #include "DHT11.h"
-#include "LCD_ili9341.h"
 #include "SPI_flash.h"
 #include "Motor.h"
 #include "Sensor.h"
@@ -42,12 +43,9 @@
 #include "usart2.h"
 #include "Led.h"
 #include "function.h"
+#include "beep.h"
 #include "Sensor_ADC.h"
 #include "function_ADC.h"
-#include "function_LCD.h"
-#include "DHT11.h"
-#include "beep.h"
-
 //全局延时函数
 void Delay( uint32_t count)
 {
