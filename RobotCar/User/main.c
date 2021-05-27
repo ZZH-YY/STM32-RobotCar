@@ -54,10 +54,11 @@ void Delay( uint32_t count)
 
 int main(void)
 {
+	//LCD初始化
 	ILI9341_Init(); 
+
 	
-	
-	//Sensor_GPIO_Config();
+
 	
 	//USART初始化
 	USART_Config();
@@ -69,7 +70,7 @@ int main(void)
 	LED_GPIO_Config();
 	
 	//机械臂检测初始化
-	Actuator_initialization();
+	//Actuator_initialization();
 	
 	//蜂鸣器初始化
 	BEEP_GPIO_Config();
@@ -78,22 +79,25 @@ int main(void)
 	DHT11_Init();
 	
 	//SPI_FLASH初始化
-	SPI_FLASH_Init();
-	
-	//Systick
-	SysTick_Init();
+	//SPI_FLASH_Init();
 	
 	//初始化DTT11的引脚
 	DHT11_Init ();
 	
-	Firstface();
-	Interface();
-	
 	//电机初始化
 	Dianji_GPIO_Config();
+	
 	//ADC初始化
 	ADCx_Init();
+	
 	//Sensor初始化
+	Sensor_GPIO_Config();
+	
+		//Systick
+	SysTick_Init();
+		//界面展示
+	Firstface();
+	Interface();
 	while(1)
 	{	
 		//信息动态显示
