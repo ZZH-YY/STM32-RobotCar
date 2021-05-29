@@ -70,7 +70,7 @@ int main(void)
 	LED_GPIO_Config();
 	
 	//机械臂检测初始化
-	//Actuator_initialization();
+	Actuator_initialization();
 	
 	//蜂鸣器初始化
 	BEEP_GPIO_Config();
